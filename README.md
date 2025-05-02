@@ -78,18 +78,62 @@ Use Python for offline data analysis:
 pip install bagpy pandas matplotlib
 ```
 
-### Analysis
+## Tasks Completed
 
-* **Scatter plot**: Northing vs Easting
-* **Histogram**: Error from known position
-* **Line fitting**: Deviation from expected path
-* **Plot**: Altitude vs Time
+- **Developed a ROS2 GPS Device Driver**: Implemented a Python script to read, parse, and process NMEA GPGGA sentences over serial communication.
+- **Latitude/Longitude to UTM Conversion**: Integrated the `utm` package to convert raw GPS coordinates into UTM easting and northing.
+- **Custom ROS2 Message Definition**: Created a custom ROS2 `.msg` file (`GpsMsg.msg`) to define structured GPS data including timestamp, position, HDOP, and UTM fields.
+- **ROS2 Publisher Node Implementation**: Developed a ROS2 node that continuously reads GPS data and publishes it on the `/gps` topic.
+- **Launch File Support**: Wrote a `gps_launch.py` file to enable dynamic configuration of the serial port during launch.
+- **Data Storage Using ROS2 Bags**: Recorded real-time GPS data in `.db3` (ROS2 bag) files for offline analysis.
+- **Statistical Analysis of GPS Data**: Analyzed collected datasets to assess positioning accuracy, GPS drift, and measurement errors.
 
-## Sources of GPS Error
+## Key Learnings
 
-* **Wind**: Minor variation in GPS readings
-* **Rain**: Weakens satellite signal, increases drift
-* **Buildings/Trees**: Cause multipath interference
+- **Interfacing with Serial Devices in ROS2**: Learned to acquire real-time data from external USB-connected sensors using `pyserial`.
+- **Writing Modular ROS2 Nodes**: Structured the ROS2 package for scalability and hardware flexibility.
+- **Creating and Using Custom ROS2 Messages**: Defined and published custom message types for rich sensor data representation.
+- **Using Launch Files in ROS2**: Utilized `launch` APIs to support parameterized execution with runtime serial port configuration.
+- **Recording and Reading ROS2 Bag Files**: Captured and replayed GPS data using ROS2 bag tools for post-processing and validation.
+- **Error Modeling and Visualization**: Performed error analysis using Python visualizations such as scatter plots, histograms, and regression.
+
+## Data Collection and Storage
+
+GPS data was collected under the following conditions:
+
+1. **Stationary Open Environment** – Clear sky with minimal obstructions.
+2. **Stationary Occluded Environment** – Near buildings or trees with potential signal interference.
+3. **Moving Data Collection** – Walking in a straight line for 200–300 meters outdoors.
+
+## Analysis
+
+### Stationary Data Analysis
+
+- Created scatter plots of UTM Northing vs. Easting to examine positional stability.
+- Compared average GPS position to a known reference point to compute positional error.
+- Generated histograms of positional error distribution for statistical analysis.
+
+### Moving Data Analysis
+
+- Fitted the recorded trajectory to a straight line to evaluate accuracy.
+- Plotted altitude vs. time to identify elevation fluctuations.
+- Applied least-squares regression to compute lateral deviation from expected path.
+
+## Error Analysis
+
+- Identified GPS error sources such as:
+  - **Multipath interference**
+  - **Satellite signal occlusion**
+  - **Atmospheric effects**
+- Correlated HDOP (Horizontal Dilution of Precision) values with measured error.
+- Compared open vs. occluded environments to quantify environmental impact.
+
+## Sources of Error Encountered
+
+- **Wind**: Minor fluctuation in GPS readings.
+- **Rain**: Decreased satellite signal strength, increased drift.
+- **Buildings/Trees**: Caused reflection and scattering of GPS signals, leading to multipath errors.
+
 
 ## Conclusion
 
