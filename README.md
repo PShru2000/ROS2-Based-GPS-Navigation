@@ -80,13 +80,13 @@ pip install bagpy pandas matplotlib
 
 ## Tasks Completed
 
-- **Developed a ROS2 GPS Device Driver**: Implemented a Python script to read, parse, and process NMEA GPGGA sentences over serial communication.
-- **Latitude/Longitude to UTM Conversion**: Integrated the `utm` package to convert raw GPS coordinates into UTM easting and northing.
-- **Custom ROS2 Message Definition**: Created a custom ROS2 `.msg` file (`GpsMsg.msg`) to define structured GPS data including timestamp, position, HDOP, and UTM fields.
-- **ROS2 Publisher Node Implementation**: Developed a ROS2 node that continuously reads GPS data and publishes it on the `/gps` topic.
-- **Launch File Support**: Wrote a `gps_launch.py` file to enable dynamic configuration of the serial port during launch.
-- **Data Storage Using ROS2 Bags**: Recorded real-time GPS data in `.db3` (ROS2 bag) files for offline analysis.
-- **Statistical Analysis of GPS Data**: Analyzed collected datasets to assess positioning accuracy, GPS drift, and measurement errors.
+- **Developed a ROS2 GPS Device Driver**
+- **Latitude/Longitude to UTM Conversion**
+- **Custom ROS2 Message Definition**
+- **ROS2 Publisher Node Implementation**
+- **Launch File Support**
+- **Data Storage Using ROS2 Bags**
+- **Statistical Analysis of GPS Data**
 
 ## Key Learnings
 
