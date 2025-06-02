@@ -238,6 +238,8 @@ GPS data was collected under the following conditions:
   </tr>
 </table>
 
+Among the three datasets, the Occluded Dataset exhibited the lowest mean position error at 21.89 meters, consistent with expectations for obstructed environments. The Open Space Daataset showed a higher-than-expected error of 32.33 meters, likely due to subtle multipath effects or receiver limitations. In contrast, the walking dataset had the highest error at 93.52 meters, highlighting the challenges of maintaining GPS accuracy during movement due to dynamic factors such as signal blockage, poor satellite geometry, and multipath interference.
+
 ## Sources of Error Encountered
 
 - **Wind**: Minor fluctuation in GPS readings.
