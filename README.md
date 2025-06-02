@@ -166,7 +166,77 @@ GPS data was collected under the following conditions:
   </tr>
 </table>
 
+###  Occluded Spot (Closed Space)
 
+####  Scatterplot of Northing vs. Easting
+
+* The scatterplot shows **significant scatter**, with points spread up to **35 meters** from the origin (after scaling).
+* ➤ This behavior is consistent with **signal degradation** due to nearby **buildings and trees**.
+
+####  Position Error
+
+* **Mean Position Error**: `21.89 meters`
+* **Expected Range**: `10–20 meters` (for obstructed environments)
+* **Explanation**: Error aligns with **signal blockage** from environmental obstructions.
+
+####  Altitude vs. Time
+
+* **Altitude fluctuations** range from `12–28 meters`
+* **Standard Deviation**: `5 meters`
+* ➤ Indicates **multipath effects** and **signal obstruction** from buildings/trees.
+
+<table>
+  <tr>
+    <td><img src="results/occluded_scatter.png" alt="Scatterplot" width="300"/></td>
+    <td><img src="results/occluded_position.png" alt="Position Error" width="300"/></td>
+    <td><img src="results/occluded_altitude.png" alt="Altitude vs Time" width="300"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Scatterplot</b></td>
+    <td align="center"><b>Position Error</b></td>
+    <td align="center"><b>Altitude vs Time</b></td>
+  </tr>
+</table>
+
+
+### 300m Walking Dataset (Moving Data)
+
+#### Scatterplot of Northing vs. Easting
+
+* The scatterplot shows a **mostly straight trajectory** with **noticeable deviations** from the expected path.
+* **Linear regression** was applied:
+
+  * **Residual errors** ranged from `5–20 meters`
+  * **Mean Residual**: `10 meters`
+* ➤ Regression R² value of **0.78** indicates a strong linear trend with significant noise from **dynamic errors**.
+
+#### Position Error
+
+* **Mean Position Error**: `93.52 meters`
+* **Explanation**: Expected for **dynamic scenarios**, where movement introduces:
+
+  * **Multipath interference**
+  * **Satellite signal blockage**
+  * **Poor satellite geometry**
+
+#### Altitude vs. Time
+
+* Shows **sharp fluctuations** from `12.5–15.5 meters`
+* **Standard Deviation**: `1.5 meters`
+* ➤ Reflects **dynamic signal variation** during motion.
+
+<table>
+  <tr>
+    <td><img src="results/300_scatter.png" alt="Scatterplot - Walk" width="300"/></td>
+    <td><img src="results/300_position.png" alt="Position Error - Walk" width="300"/></td>
+    <td><img src="results/300_altitude.png" alt="Altitude - Walk" width="300"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Scatterplot</b></td>
+    <td align="center"><b>Position Error</b></td>
+    <td align="center"><b>Altitude vs Time</b></td>
+  </tr>
+</table>
 
 ## Sources of Error Encountered
 
