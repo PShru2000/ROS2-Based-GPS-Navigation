@@ -129,9 +129,6 @@ GPS data was collected under the following conditions:
 - Compared open vs. occluded environments to quantify environmental impact.
 
 ## Results:
-Certainly! Here's how you can format the **Open Spot (Carter Dataset)** results in GitHub-flavored Markdown for your README:
-
----
 
 ###  Open Space Analysis
 
@@ -157,8 +154,10 @@ Certainly! Here's how you can format the **Open Spot (Carter Dataset)** results 
 * ➤ Indicates **stable vertical measurements** in open environments.
 
 ![Scatterplot of Northing vs Easting](results/scatter_os.png)
+
 ![Position Error](results/positionerror_os.png)
-![Altitude vs Time](results/positionerror_os.png)
+
+![Altitude vs Time](results/altitude_os.png)
 
 ## Sources of Error Encountered
 
