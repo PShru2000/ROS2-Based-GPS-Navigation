@@ -153,11 +153,15 @@ GPS data was collected under the following conditions:
 * **Standard Deviation**: `0.3 meters`
 * ➤ Indicates **stable vertical measurements** in open environments.
 
-![Scatterplot of Northing vs Easting](results/scatter_os.png)
+<h4>Scatterplot of Northing vs. Easting</h4>
+<img src="results/scatter_os.png" alt="Scatterplot" width="400"/>
 
-![Position Error](results/positionerror_os.png)
+<h4>Position Error</h4>
+<img src="results/positionerror_os.png" alt="Position Error" width="400"/>
 
-![Altitude vs Time](results/altitude_os.png)
+<h4>Altitude vs Time</h4>
+<img src="results/altitude_os.png" alt="Altitude vs Time" width="400"/>
+
 
 ## Sources of Error Encountered
 
