@@ -128,6 +128,38 @@ GPS data was collected under the following conditions:
 - Correlated HDOP (Horizontal Dilution of Precision) values with measured error.
 - Compared open vs. occluded environments to quantify environmental impact.
 
+## Results:
+Certainly! Here's how you can format the **Open Spot (Carter Dataset)** results in GitHub-flavored Markdown for your README:
+
+---
+
+###  Open Space Analysis
+
+####  Scatterplot of Northing vs. Easting
+
+* The scatterplot shows **tight clustering** of data points.
+* Most points fall within a **1–5 meter radius** of the origin after scaling (subtracting the first value).
+* Indicates **high precision** in open environments with minimal signal obstruction.
+
+####  Position Error
+
+* **Mean Position Error**: `32.33 meters`
+* **Expected Range**: `5–10 meters` (for consumer-grade GPS)
+* **Explanation**: Higher-than-expected error likely due to:
+
+  * Subtle **multipath effects** (e.g., reflections from distant terrain)
+  * Potential **reference position scaling inaccuracies**
+
+####  Altitude vs. Time
+
+* Shows **minor fluctuations** of `< 1 meter` over time.
+* **Standard Deviation**: `0.3 meters`
+* ➤ Indicates **stable vertical measurements** in open environments.
+
+![Scatterplot of Northing vs Easting](results/scatter_os.png)
+![Position Error](results/positionerror_os.png)
+![Altitude vs Time](results/positionerror_os.png)
+
 ## Sources of Error Encountered
 
 - **Wind**: Minor fluctuation in GPS readings.
