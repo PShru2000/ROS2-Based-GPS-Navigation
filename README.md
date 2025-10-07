@@ -1,6 +1,6 @@
 # ROS2-Based GPS Navigation
 
-## Goal
+## Goal:-
 
 This project aims to record, publish, and analyze GPS data using a USB-based GNSS puck in a ROS2 environment. It converts raw NMEA GPGGA data to UTM coordinates and publishes them via a custom ROS2 message. The data is also stored in ROS2 bag files for further analysis.
 
